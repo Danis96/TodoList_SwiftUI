@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ListItemView: View {
     
-    let title: String
+    let item: ItemModel
     
     var body: some View {
         HStack(content: {
-            Image(systemName: "checkmark.circle")
-            Text(title)
+            Image(systemName: item.isChecked ? "checkmark.circle" : "circle")
+                .foregroundStyle(item.isChecked ? .green : .red)
+            Text(item.title)
             Spacer()
         })
     }
@@ -22,5 +23,5 @@ struct ListItemView: View {
 
 
 #Preview {
-    ListItemView(title: "First")
+    ListItemView(item: ItemModel(title: "Second", isChecked: false))
 }
