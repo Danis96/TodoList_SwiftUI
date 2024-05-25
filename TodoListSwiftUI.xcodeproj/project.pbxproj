@@ -14,6 +14,7 @@
 		43361DF22C007CED007140DF /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43361DF12C007CED007140DF /* ListItemView.swift */; };
 		43361DF42C0083C6007140DF /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43361DF32C0083C6007140DF /* AddView.swift */; };
 		43361DF72C00A3B7007140DF /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43361DF62C00A3B7007140DF /* ItemModel.swift */; };
+		43361DFA2C01D5E0007140DF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43361DF92C01D5E0007140DF /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		43361DF12C007CED007140DF /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		43361DF32C0083C6007140DF /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		43361DF62C00A3B7007140DF /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		43361DF92C01D5E0007140DF /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				43361DE02C0073F5007140DF /* TodoListSwiftUIApp.swift */,
 				43361DF52C00A3A1007140DF /* Models */,
+				43361DF82C01D51D007140DF /* ViewModels */,
 				43361DEE2C007963007140DF /* Views */,
 				43361DE42C0073F7007140DF /* Assets.xcassets */,
 				43361DE62C0073F7007140DF /* Preview Content */,
@@ -90,6 +93,14 @@
 				43361DF62C00A3B7007140DF /* ItemModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		43361DF82C01D51D007140DF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				43361DF92C01D5E0007140DF /* ListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 			files = (
 				43361DF72C00A3B7007140DF /* ItemModel.swift in Sources */,
 				43361DF42C0083C6007140DF /* AddView.swift in Sources */,
+				43361DFA2C01D5E0007140DF /* ListViewModel.swift in Sources */,
 				43361DF22C007CED007140DF /* ListItemView.swift in Sources */,
 				43361DE12C0073F5007140DF /* TodoListSwiftUIApp.swift in Sources */,
 				43361DF02C007979007140DF /* ListView.swift in Sources */,

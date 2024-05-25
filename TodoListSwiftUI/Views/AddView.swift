@@ -10,6 +10,11 @@ import SwiftUI
 struct AddView: View {
     
     @State var textFieldText: String = ""
+    @EnvironmentObject var listViewModel: ListViewModel
+    @Environment(\.dismiss) var dismissScreen
+    
+    @State var alertTitle: String = ""
+    @State var showAlert: Bool = false
     
     var body: some View {
         ScrollView {
@@ -23,6 +28,15 @@ struct AddView: View {
                 
                 Button(action: {
                     
+                    if listViewModel.checkItemTitleLength(title: textFieldText) {
+                        listViewModel.addItem(title: textFieldText)
+                        dismissScreen.callAsFunction()
+                    } else {
+                        alertTitle = "Your item cannot be less than 3 characters!!! 🥸"
+                        showAlert.toggle()
+                    }
+                    
+                    
                 }, label: {
                     Text("Save".uppercased())
                         .frame(height: 50)
@@ -35,11 +49,17 @@ struct AddView: View {
                 
             }).padding(14)
         }.navigationTitle("Add an Item 🖊️")
+            .alert(isPresented: $showAlert, content: getAlert)
     }
+    
+    func getAlert() -> Alert {
+        return Alert(title: Text(alertTitle))
+    }
+    
 }
 
 #Preview {
     NavigationStack {
         AddView()
-    }
+    }.environmentObject(ListViewModel())
 }
