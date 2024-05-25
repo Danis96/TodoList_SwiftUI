@@ -15,6 +15,11 @@ struct ListView: View {
         List {
             ForEach(listViewModel.items, content: { item in
                  ListItemView(item: item)
+                    .onTapGesture {
+                        withAnimation {
+                            listViewModel.updateItem(item: item)
+                        }
+                    }
             })
             .onDelete(perform: listViewModel.delete)
             .onMove(perform: listViewModel.move)

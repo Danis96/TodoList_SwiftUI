@@ -47,6 +47,14 @@ class ListViewModel: ObservableObject {
             return true
         }
     }
+    
+    func updateItem(item: ItemModel) {
+        // we use $0 for the first element
+        // and then we need to update that element
+        if let index = items.firstIndex(where: {$0.id == item.id}) {
+            items[index] = item.updateCompletion()
+        }
+    }
    
     
 }
