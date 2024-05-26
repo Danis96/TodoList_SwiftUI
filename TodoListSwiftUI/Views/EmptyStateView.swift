@@ -41,6 +41,7 @@ struct EmptyStateView: View {
                 .offset(y: animate ? -7 : 0)
                 
             })
+            .frame(maxWidth: 400)
             .multilineTextAlignment(.center)
             .padding(40)
             .onAppear(perform: addAnimation)

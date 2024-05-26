@@ -47,7 +47,9 @@ struct AddView: View {
                     
                 })
                 
-            }).padding(14)
+            })
+            .frame(maxWidth: 600)
+            .padding(14)
         }.navigationTitle("Add an Item 🖊️")
             .alert(isPresented: $showAlert, content: getAlert)
     }
